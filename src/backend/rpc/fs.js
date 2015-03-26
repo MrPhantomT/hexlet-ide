@@ -1,6 +1,7 @@
 /* global module require */
 var path = require("path");
 var fs = require("fs-extra");
+var glob = require("glob");
 var TreeModel = require("tree-model");
 var rimraf = require("rimraf");
 var when = require("when");
@@ -34,6 +35,33 @@ module.exports = function(options) {
       });
 
       return rootItem;
+    },
+
+    filesList: function() {
+      var dirPath = options.rootDir;
+      var findGlobPath = dirPath + "/**/*";
+
+      var deferred = when.defer();
+
+      glob(findGlobPath, function(er, files) {
+        var result = files.map(function(filePath) {
+          var data = {
+            name: path.basename(filePath),
+            id: fs.statSync(filePath).ino,
+            type: "file",
+            path: filePath,
+            state: "closed"
+          };
+          return {
+            data: data,
+            value: filePath,
+            label: filePath.replace(dirPath + "/", "")
+          };
+        });
+        deferred.resolve({ files: result });
+      });
+
+      return deferred.promise;
     },
 
     read: function(path) {

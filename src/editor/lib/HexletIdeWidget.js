@@ -4,6 +4,7 @@ const Config = require("editor/config");
 const Ide = require("editor/components/Ide");
 
 const KeyboardActions = require("editor/actions/KeyboardActions");
+const FileSearchActions = require("editor/actions/FileSearchActions");
 const TreeActions = require("editor/actions/TreeActions");
 const TerminalsActions = require("editor/actions/TerminalsActions");
 const IdeActions = require("editor/actions/IdeActions");
@@ -70,7 +71,8 @@ export default class HexletIdeWidget {
 
   bindKeyEvents() {
     Mousetrap.bind("esc", KeyboardActions.esc);
-    Mousetrap.bind("ctrl+r", IdeActions.run);
+    Mousetrap.bind("ctrl+r", KeyboardActions.ctrl_r);
+    Mousetrap.bind("ctrl+p", KeyboardActions.ctrl_p);
     Mousetrap.bind("ctrl+[", KeyboardActions.ctrl_open_square_br);
     Mousetrap.bind("ctrl+]", KeyboardActions.ctrl_close_square_br);
   }

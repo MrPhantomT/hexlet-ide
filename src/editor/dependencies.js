@@ -11,6 +11,8 @@ require("codemirror/lib/codemirror.css");
 require("codemirror/theme/solarized.css");
 require("xterm.js/src/xterm.css");
 
+require("react-select/dist/default.css");
+
 require("codemirror/mode/javascript/javascript");
 require("codemirror/mode/python/python");
 require("codemirror/mode/ruby/ruby");

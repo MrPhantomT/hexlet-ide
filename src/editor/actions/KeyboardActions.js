@@ -1,13 +1,20 @@
 const AppDispatcher = require("editor/dispatcher/AppDispatcher");
 const ActionTypes = require("editor/constants/IdeConstants").ActionTypes;
 
+const FileSearchActions = require("./FileSearchActions");
+const IdeActions = require("./FileSearchActions");
+
 module.exports = {
   esc() {
     AppDispatcher.dispatch({ actionType: ActionTypes.KEY_ESC });
   },
 
   ctrl_r() {
-    AppDispatcher.dispatch({ actionType: ActionTypes.KEY_CTRL_R });
+    IdeActions.run();
+  },
+
+  ctrl_p() {
+    FileSearchActions.open();
   },
 
   ctrl_open_square_br() {

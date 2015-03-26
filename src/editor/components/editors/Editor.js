@@ -16,6 +16,8 @@ export default React.createClass({
         },
         "Ctrl-[": KeyboardActions.ctrl_open_square_br,
         "Ctrl-]": KeyboardActions.ctrl_close_square_br,
+        "Ctrl-p": KeyboardActions.ctrl_p,
+        "Ctrl-r": KeyboardActions.ctrl_r,
         "Shift-Tab": "autocomplete"
       },
       value: this.props.initContent,

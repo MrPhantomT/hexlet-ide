@@ -9,6 +9,7 @@ var RunnerBox = require("editor/components/RunnerBox");
 var ActionsBox = require("editor/components/ActionsBox");
 var StatusBox = require("editor/components/StatusBox");
 var PopupBox = require("editor/components/PopupBox");
+var FileSearch = require("editor/components/file_search/FileSearch");
 
 var IdeActions = require("editor/actions/IdeActions");
 var WatchStoreMixin = require("editor/mixins/WatchStore");
@@ -74,6 +75,7 @@ var Ide = React.createClass({
       <div className="ide-inner">
         <PopupBox />
         <ContextMenu />
+        <FileSearch />
         {this.renderDisplayMode(displayMode)}
       </div>
     );

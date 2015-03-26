@@ -46,6 +46,9 @@ module.exports = {
     CONTEXT_MENU_SHOW: null,
     CONTEXT_MENU_HIDE: null,
 
+    FILE_SEARCH_OPEN: null,
+    FILE_SEARCH_CHANGE_FILTER: null,
+
 
     KEY_ESC: null,
     KEY_CTRL_R: null,
