@@ -5,12 +5,17 @@ var morgan = require("morgan");
 var http = require("http");
 var socketIOFactory = require("socket.io");
 var rpcFactory = require("./rpc");
+var connectMincer = require("./mincer.js");
 
 var routes = require("./routes/index");
 
 module.exports = function(options) {
   var app = express();
   app.use(morgan("combined"));
+  app.use(connectMincer.assets());
+  if (process.env.NODE_ENV !== 'production') {
+    app.use('/public/assets', connectMincer.createServer());
+  }
   app.engine("jade", require("jade").__express);
 
   app.set("views", path.join(__dirname, "views"));

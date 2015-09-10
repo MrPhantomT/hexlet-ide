@@ -56,7 +56,6 @@
     "gulp-util": "*",
     "gulp-watch": "*",
     "keymaster": "*",
-    "less-loader": "*",
     "main-bower-files": "*",
     "mocha": "*",
     "nightmare": "*",
@@ -65,6 +64,8 @@
     "style-loader": "*",
     "url-loader": "*",
     "webpack-dev-middleware": "*",
-    "webpack-stream": "*"
+    "webpack-stream": "*",
+    "connect-mincer": "*",
+    "less": "<2.0.0"
   }
 }

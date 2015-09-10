@@ -1,10 +1,10 @@
 /* global require */
 require("array.from");
 
-require("codemirror/lib/codemirror.css");
-require("codemirror/theme/solarized.css");
-require("xterm.js/src/xterm.css");
-require("escaper.js/src/escaper.css");
+// require("codemirror/lib/codemirror.css");
+// require("codemirror/theme/solarized.css");
+// require("xterm.js/src/xterm.css");
+// require("escaper.js/src/escaper.css");
 
 require("codemirror/mode/javascript/javascript");
 require("codemirror/mode/python/python");
@@ -33,4 +33,4 @@ require("codemirror/addon/hint/anyword-hint");
 
 require("xterm.js/addons/fit/fit.js");
 
-require("editor/styles/application.less");
+// require("editor/styles/application.less");

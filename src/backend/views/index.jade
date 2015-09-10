@@ -6,7 +6,12 @@ html
     script(src="https://code.jquery.com/jquery-1.11.3.min.js")
     //- script(src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/codemirror.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.3/es5-shim.js")
-    script(type='text/javascript' src="assets/main.js")
+    script(type='text/javascript' src="/assets/main.js")
+    != css('application.css')
+    != css("codemirror/lib/codemirror.css")
+    != css("codemirror/theme/solarized.css")
+    != css("xterm.js/src/xterm.css")
+    != css("escaper.js/src/escaper.css")
   body
     #hexlet-ide.hexlet-ide
 
