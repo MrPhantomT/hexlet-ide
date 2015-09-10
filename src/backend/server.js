@@ -12,9 +12,10 @@ var routes = require("./routes/index");
 module.exports = function(options) {
   var app = express();
   app.use(morgan("combined"));
+
   app.use(connectMincer.assets());
-  if (process.env.NODE_ENV !== 'production') {
-    app.use('/public/assets', connectMincer.createServer());
+  if (process.env.NODE_ENV !== "production") {
+    app.use("/public/assets", connectMincer.createServer());
   }
   app.engine("jade", require("jade").__express);
 
